@@ -8,7 +8,6 @@ import { NavigationContainer } from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack'
 
 const stcak = createNativeStackNavigator()
-//import { Colors } from 'react-native/Libraries/NewAppScreen';
 
 export default function App() {
  const [data , setdata] = useState([])
@@ -49,33 +48,17 @@ export default function App() {
   }
   return (
     <View style={styles.main}>
-    {/* <View style={styles.container}>
-      <Text style={styles.innerText}>Book your Hotel Now</Text>
-      <Button style={styles.button} onPress = {loginhandler} title="Login" />
-      {showmodal ? <Button style={styles.button} onPress = {loginhandler} title="History" /> : null}
-    </View> */}
-    {/* <View style={styles.box}>
-       
-    </View> */}
-
-
-
     <Header handleslog = {loginhandler} visible = {showmodal}  users={user} email={emai} />
     <View style = {styles.sub}>
     {data.map((item, index) => <Compos datas={item} users={user} key={index} usersdata = {updatesuser} handleslog={loginhandler} visible = {showmodal} handleuser={userhandle} /> )}
     </View>
-    {/* <Compos datas={data} handleslog={loginhandler} visible = {showmodal} handleuser={userhandle} />  */}
-    {/* <Compos handleslog={loginhandler} visible = {showmodal} handleuser={userhandle} /> */}
-
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   main: {
-    //alignItems: 'center',
     flexDirection: 'column',
-    //justifyContent: 'space-between',
     flex: 1
   },
   sub : {
@@ -84,7 +67,6 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    //flex: 0.5,
     height: 100,
     width : "100%",
     backgroundColor: 'red',
